@@ -1,0 +1,25 @@
+<%= simple_form_for(@profile) do |f| %>
+
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= image_tag @profile.avatar.url(:medium), class: "img-circle" %>
+
+    <%= f.input :avatar, as: :file %>
+
+    <%= f.input :first_name %>
+
+    <%= f.input :last_name %>
+
+    <%= f.input :born_at, as: :date %>
+
+  </div>
+
+  <div class="form-actions">
+
+    <%= f.button :submit %>
+
+  </div>
+
+<% end %>
